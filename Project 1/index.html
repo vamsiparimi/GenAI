@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="animate__animated">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hi, I'm Vamsi. I'm a Software Engineer with a passion for UI development.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="animate__animated">
+        <h1>Projects</h1>
+        <div class="project" onclick="showModal('Project 1', 'Description of Project 1.')">
+            <h2>Project 1</h2>
+            <p>Have built an app.</p>
+        </div>
+        <div class="project" onclick="showModal('Project 2', 'Description of Project 2.')">
+            <h2>Project 2</h2>
+            <p>created a chat bot.</p>
+        </div>
+       
+    </section>
+
+    <section id="skills" class="animate__animated">
+        <h1>Skills</h1>
+        <ul>
+            <li>Python <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
+            <li>Java <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div></li>
+            <li>C++ <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div></li>
+           
+        </ul>
+    </section>
+
+    <section id="contact" class="animate__animated">
+        <h1>Contact</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
